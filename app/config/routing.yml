@@ -1,0 +1,16 @@
+application_twitter:
+    resource: "@ApplicationTwitterBundle/Resources/config/routing.yml"
+    prefix:   /
+
+application_menu:
+    resource: "@ApplicationMenuBundle/Resources/config/routing.yml"
+    prefix:   /
+
+application_home_page:
+    resource: "@ApplicationHomePageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+application_contact:
+    resource: "@ApplicationContactBundle/Resources/config/routing.yml"
+    prefix:   /
+

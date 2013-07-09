@@ -1,0 +1,7 @@
+parameters:
+   application_contact.entity.email: Application\ContactBundle\Entity\Email
+
+services:
+    swiftmailer:
+        class:     %application_contact.entity.email%
+        arguments: [@mailer]

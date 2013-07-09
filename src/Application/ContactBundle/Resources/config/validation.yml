@@ -1,0 +1,12 @@
+Acme\Bundle\Form\Type\ContactType:
+    properties:
+        name:
+            - NotBlank: ~
+        subject:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email:
+                message: The email "{{ value }}" is not a valid email.
+        message:
+            - NotBlank: ~

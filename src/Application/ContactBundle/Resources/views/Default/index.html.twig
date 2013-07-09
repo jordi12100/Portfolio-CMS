@@ -1,0 +1,38 @@
+{% extends 'ApplicationCoreBundle:Default:base.html.twig' %}
+
+{% block content %}
+
+<h2>Neem contact met mij op</h2>
+
+{% if error == 1 %}
+<div class="errormsgbox" > U heeft niet alle velden (correct) ingevuld. </div>
+{% elseif error == 2 %}
+<div class="errormsgbox" > Uw aanvraag kon niet worden behandeld. Probeert u het later nogeens. </div>
+{% endif %}
+
+{% if success == 1 %}
+<div class="successbox" > Uw bericht is succesvol verzonden. </div>
+{% endif %}
+
+<form method="post" action ="{{ path('contact_send') }}">
+        {{ form_errors(form) }}
+
+		{{ form_label(form.name, 'Uw naam: ') }} <br />
+		{{ form_widget(form.name) }} <br /><br />
+		
+		{{ form_label(form.email, 'Uw email: ') }} <br />
+		{{ form_widget(form.email) }} <br /><br />
+		
+		{{ form_label(form.subject, 'Onderwerp: ') }} <br />
+		{{ form_widget(form.subject) }} <br /><br />
+		
+		{{ form_label(form.message, 'Bericht: ') }} <br />
+		{{ form_widget(form.message) }} <br /><br />	
+		
+        {{ form_rest(form) }}
+        
+        <input type="submit" value="Verzenden" id="button" class="textfield" />
+		
+</form>
+
+{% endblock %}

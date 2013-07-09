@@ -1,0 +1,7 @@
+contact:
+    path:     /contact/
+    defaults: { _controller: ApplicationContactBundle:Default:index }
+
+contact_send:
+    path:     /contact/send
+    defaults: { _controller: ApplicationContactBundle:Default:index }

@@ -1,0 +1,7 @@
+parameters:
+#    application_home_page.example.class: Application\HomePageBundle\Example
+
+services:
+#    application_home_page.example:
+#        class: %application_home_page.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

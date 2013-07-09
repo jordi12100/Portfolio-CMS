@@ -1,0 +1,19 @@
+Application\MenuBundle\Entity\Menu:
+    type: entity
+    repositoryClass: Application\MenuBundle\Entity\MenuRepository
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        link:
+            type: string
+            length: 255
+        name:
+            type: string
+            length: 255
+        orderby:
+            type: integer
+    lifecycleCallbacks: {  }

@@ -1,0 +1,18 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: symfony
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: mail.example.com
+    mailer_user: username
+    mailer_password: password
+    locale: en
+    secret: 'MySecretHash'
+    web_path: http://localhost/symfony/web/app_dev.php
+    
+    contact_name: Name Lastname
+    contact_email: info@example.com
