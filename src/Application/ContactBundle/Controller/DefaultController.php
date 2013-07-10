@@ -16,7 +16,6 @@ class DefaultController extends Controller {
 	protected $request;
 
 	public function indexAction(Request $request) {
-
 		$this -> request = $request;
 
 		$error = 0;
@@ -48,7 +47,7 @@ class DefaultController extends Controller {
 			} else {
 				$error = 1;
 			}
-
+			
 		}
 
 		return $this -> render('ApplicationContactBundle:Default:index.html.twig', array('form' => $form -> createView(), 'success' => $success, 'error' => $error));
@@ -67,5 +66,5 @@ class DefaultController extends Controller {
 		return $format;
 
 	}
-
+	
 }

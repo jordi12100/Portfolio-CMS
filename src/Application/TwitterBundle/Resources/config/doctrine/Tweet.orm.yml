@@ -1,0 +1,17 @@
+Application\TwitterBundle\Entity\Tweet:
+    type: entity
+    table: null
+    repositoryClass: Application\TwitterBundle\Entity\TweetRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        tweet:
+            type: string
+            length: 255
+        user:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
