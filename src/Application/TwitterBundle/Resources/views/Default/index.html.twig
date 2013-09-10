@@ -1,1 +1,13 @@
-Hello {{ name }}!
+			<ul>
+			    {% for item in items %}
+					<li>
+						<span class="date">
+							<b>{{ item.user }}:</b>
+						</span> 
+						<a href="#">{{ item.tweet|raw }}</a>
+					</li>
+			    {% endfor %}
+    
+			</ul>
+			
+								

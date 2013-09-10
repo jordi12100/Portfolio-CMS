@@ -7,15 +7,12 @@ parameters:
     database_user: root
     database_password: null
     mailer_transport: smtp
-    mailer_host: mail.proxybay.nl
-    mailer_user: jordi
+    mailer_host: mail.example.com
+    mailer_user: username
     mailer_password: password
     locale: en
-    secret: MySecretHashVerySecret
-    web_path: 'http://localhost/cms/web/app_dev.php'
-    contact_name: 'Jordi Kroon'
-    contact_email: jordi@jordikroon.nl
-    consumer_key: ''
-    consumer_secret: ''
-    token_key: ''
-    token_secret: ''
+    secret: 'MySecretHash'
+    web_path: http://localhost/symfony/web/app_dev.php
+    
+    contact_name: Name Lastname
+    contact_email: info@example.com

@@ -6,8 +6,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function getTweetsAction()
     {
-        return $this->render('ApplicationTwitterBundle:Default:index.html.twig', array('name' => $name));
+		$tweetarray = $this -> getDoctrine() -> getRepository('ApplicationTwitterBundle:Tweet') -> findAllOrderedByDateAdded();
+		
+		$tweetData = array();
+		
+		foreach($tweetarray AS $key => $tweet) {
+			$tweetData[$key]['tweet'] = $tweet -> getTweet();
+			$tweetData[$key]['user'] = $tweet -> getUser();
+		}
+		
+        return $this->render('ApplicationTwitterBundle:Default:index.html.twig', array('items' => $tweetData));
     }
+	
 }

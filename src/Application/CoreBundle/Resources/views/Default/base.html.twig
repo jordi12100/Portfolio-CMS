@@ -8,7 +8,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
 
-{% stylesheets 'bundles/base/css/style.css' filter='cssrewrite' %}
+{% stylesheets 'bundles/base/css/*' filter='cssrewrite' %}
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
 {% endstylesheets %}
 
@@ -39,7 +39,7 @@
 			<h3>Twitter </h3>
 			<div class="date-list">
 				<ul class="list date-list">
-					{% block twitter %}{% endblock %}
+					{{ render(controller('ApplicationTwitterBundle:Default:getTweets')) }}
 					<li class="last"></li>
 				</ul>
 			</div>

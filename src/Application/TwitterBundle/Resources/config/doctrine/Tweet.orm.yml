@@ -14,4 +14,6 @@ Application\TwitterBundle\Entity\Tweet:
         user:
             type: string
             length: 255
+        date_added:
+            type: datetime
     lifecycleCallbacks: {  }
